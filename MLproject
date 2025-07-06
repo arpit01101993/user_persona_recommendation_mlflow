@@ -1,0 +1,11 @@
+name: user_persona_recommendation
+
+conda_env: conda.yaml
+
+entry_points:
+  feature_engineering:
+    command: "python src/feature_engineering.py"
+  train:
+    command: "python src/train.py"
+  serve:
+    command: "python src/serve.py"
