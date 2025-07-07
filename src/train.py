@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 mlflow.set_experiment("UserPersonaRecommendations")
 
 with mlflow.start_run():
-    df = pd.read_parquet("data/processed/features.parquet")
+    df = pd.read_parquet("data/processed/features.parquet") #replace this with real time reader
     X = df.drop(["user_id", "product_id", "label"], axis=1)
     y = df["label"]
 
